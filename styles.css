@@ -187,3 +187,12 @@ footer p {
   line-height: 0;
   margin-right: 20px;
 }
+
+.logo {
+  border-radius: 0 0 20px 0;
+  border-color: white;
+  border-style: outset;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
