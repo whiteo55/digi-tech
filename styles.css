@@ -190,8 +190,11 @@ footer p {
 
 .logo {
   border-radius: 0 0 20px 0;
-  border-color: white;
-  border-style: outset;
+  border-style: inset; /* Changed from outset to solid */
+  border-width: 0;    /* Reset all borders to zero */
+  border-bottom-width: 3px; /* Set bottom border width */
+  border-right-width: 3px;  /* Set right border width */
+  border-color: rgba(255, 255, 255, 0.658);
   position: fixed;
   top: 0;
   left: 0;
