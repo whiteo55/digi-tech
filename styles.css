@@ -199,3 +199,16 @@ footer p {
   top: 0;
   left: 0;
 }
+
+.access {
+  text-align: center;
+  height: 75px;
+  background-color: #2d2d2a;
+  color: #e5dcc5;
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
