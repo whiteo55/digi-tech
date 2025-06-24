@@ -1,16 +1,29 @@
+<!--
+  Adventure Cymru - Dev Page
+  This page contains development logs and game details for the Adventure Cymru project.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title and favicon -->
     <title>Adventure Cymru - Dev Page</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Link to main stylesheet and Google Fonts -->
     <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
   </head>
   <body>
+    <!-- Header section with logo, title, and navigation -->
     <header>
-      <img src="logo.png" class ="logo" width="65" height="65" onclick="document.location='index.html'">
-      <h1 style="padding-left: 475px;">Adventure Cymru Development Page</h1>
+      <!-- Logo image, clickable to return to home page -->
+      <img src="logo.png" class="logo" width="80" height="80" onclick="document.location='index.html'" alt="Adventure Cymru Logo">
+      <!-- Main heading for the dev page -->
+      <h1 style="padding-left: 625px;">Adventure Cymru Development Page</h1>
+      <!-- Navigation bar with a Home button -->
       <nav style="margin-left: 500px;">
         <button href="index.html" class="navbutton" onclick="document.location='index.html'">Home</button>
       </nav>
@@ -18,26 +31,43 @@
 
     <main>
       <section>
+        <!-- Section for development logs -->
         <h2>Development Logs</h2>
         <ul>
-          <li>•        <strong>Log #1:</strong> Game Design Document</li>
-          <li>•        <strong>Log #2:</strong> Website Layout Decisions</li>
-          <li>•        <strong>Log #3:</strong> Testing and Feedback</li>
+          <!-- Each log entry is a paragraph for now (could be <li> for better semantics) -->
+          <p>•         <strong>Log #1:</strong> Game Design Document</p>
+          <p>•         <strong>Log #2:</strong> Website Layout Decisions</p>
+          <p>•         <strong>Log #3:</strong> Testing and Feedback</p>
         </ul>
+        <!-- Section describing game details -->
         <h3>Game Details:</h3>
         <p>
-          The game is designed to challenge players in a survival situation,
-          navigating from a plane crash to safety.
+          The game is designed to challenge players in a survival situation, navigating from a plane crash to safety.
+        </p> 
+        <p>
+          Players must explore the Welsh wilderness, gather resources, solve environmental puzzles, and make critical decisions that affect their journey.
+        </p> 
+        <p>
+          Along the way, they will encounter dynamic weather, wildlife, and unexpected obstacles that test their problem-solving and adaptability.
+        </p> 
+        <p>
+          The game emphasizes teamwork, resource management, and strategic planning, offering multiple paths and endings based on player choices.
+        </p> 
+        <p>
+          Immersive visuals and an engaging storyline aim to provide a unique and educational adventure experience.
         </p>
       </section>
     </main>
 
+    <!-- Fixed bottom navigation bar -->
     <div class="bottomnavbar">
       <p>&copy; 2025 Adventure Cymru. All rights reserved.</p>
     </div>
+    <!-- Accessibility bar with toggle button -->
     <div class="access">
       <button class="accessibilitybutton" id="accessibilityBtn">accessibility</button>
     </div>
+    <!-- Link to JavaScript for accessibility features -->
     <script src="script.js"></script>
   </body>
 </html>

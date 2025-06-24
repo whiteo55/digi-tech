@@ -1,50 +1,83 @@
-/* Global Styles */
+/* ===========================
+   Global Styles
+============================== */
+
+/* Reset default browser styles and set box-sizing for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set base font and background for the body */
 body {
   font-family: Arial, sans-serif;
   background-color: #e5dcc5; /* Soft creamy background */
   color: #2d2d2a; /* Dark grayish tone for body text */
 }
 
+/* Headings use a different font and color for distinction */
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
-  color: #cccccc; /* Dark grayish tone for headings */
+  color: #cccccc; /* Light gray for headings */
 }
 
+/* Make h1 inline-block for layout flexibility */
 h1 {
   display: inline-block;
 }
 
+/* Set a larger font size for h3 */
 h3 {
   font-size: 30px;
 }
 
-/* Fixed header and navbar positioning */
+/* ===========================
+   Header and Navigation
+============================== */
+
+/* Style the header: dark background, centered content, flex layout */
 header {
   background-color: #2d2d2a; /* Dark background */
-  padding: 20px 0;           /* Removed big left padding */
+  padding: 20px 0;           /* Vertical padding */
   line-height: 1.2;
   text-align: center;
   color: #e5dcc5; /* Creamy text color */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px; /* space between header elements */
+  gap: 50px; /* Space between header elements */
   position: relative;
 }
 
+/* Style header buttons: border, rounded corners, transitions */
+header button {
+  border: 2px solid #e5dcc5; /* Creamy border color */
+  border-radius: 8px;
+  padding: 10px 20px;
+  background: #c14953; /* Reddish-pink background */
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+/* Header button hover effect: invert colors */
+header button:hover {
+  border-color: #c14953; /* Change border color on hover */
+  background: #e5dcc5;
+  color: #2d2d2a;
+}
+
+/* Navigation bar uses flex for horizontal layout */
 nav {
   display: flex;
   justify-content: center;
 }
 
+/* Navigation list: remove bullets, horizontal layout, spacing */
 nav ul {
   list-style: none;
   padding: 0;
@@ -54,10 +87,12 @@ nav ul {
   gap: 20px;
 }
 
+/* Remove margin from nav list items */
 nav ul li {
   margin: 0;
 }
 
+/* Navigation links: color, no underline, transition on hover */
 nav ul li a {
   color: #848fa5; /* Soft blue-gray for links */
   text-decoration: none;
@@ -65,16 +100,23 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
+/* Navigation link hover: highlight with reddish-pink */
 nav ul li a:hover {
   color: #c14953; /* Rich reddish-pink on hover */
 }
 
+/* ===========================
+   Main Content and Sections
+============================== */
+
+/* Main content padding */
 main {
   padding: 40px 20px;
 }
 
+/* Section styling: background, padding, rounded corners, shadow */
 section {
-  background-color: #4c4c47; /* Dark olive-greenish-gray for sections */
+  background-color: #4c4c47; /* Dark olive-greenish-gray */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -85,8 +127,13 @@ section {
   padding-left: 0;
 }
 
+/* ===========================
+   Buttons
+============================== */
+
+/* General button styling */
 button {
-  background-color: #c14953; /* Rich reddish-pink for button */
+  background-color: #c14953; /* Reddish-pink */
   color: white;
   padding: 15px 30px;
   border: none;
@@ -95,11 +142,17 @@ button {
   transition: background-color 0.3s ease;
 }
 
+/* Button hover: invert background and text color */
 button:hover {
-  background-color: #e5dcc5; /* Soft creamy color on hover */
-  color: #2d2d2a; /* Dark text color on hover */
+  background-color: #e5dcc5; /* Creamy color */
+  color: #2d2d2a; /* Dark text */
 }
 
+/* ===========================
+   Footer and Bottom Navbar
+============================== */
+
+/* Footer styling: dark background, creamy text, centered */
 footer {
   background-color: #2d2d2a; /* Dark background */
   color: #e5dcc5; /* Creamy text color */
@@ -107,61 +160,12 @@ footer {
   padding: 20px;
 }
 
+/* Remove default margin from footer paragraphs */
 footer p {
   margin: 0;
 }
 
-#game-container {
-  text-align: center;
-  font-size: 24px;
-  position: relative;
-}
-
-.dots-container {
-  display: inline-block;
-  font-size: 30px;
-}
-
-.dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  background-color: #000;
-  border-radius: 50%;
-  margin: 0 4px;
-  animation: dotAnimation 1.5s infinite ease-in-out;
-}
-
-.dot:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.dot:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.dot:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-@keyframes dotAnimation {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-}
-
-.playgamebutton {
-  width: 300px;
-  border-radius: 15px;
-  border: white;
-  border-style: outset;
-  border-color: white;
-}
-
+/* Bottom navbar: fixed at bottom, dark background, creamy text */
 .bottomnavbar {
   text-align: center;
   height: 50px;
@@ -175,6 +179,70 @@ footer p {
   box-sizing: border-box;
 }
 
+/* ===========================
+   Game Loading Animation
+============================== */
+
+/* Game container: center text, larger font */
+#game-container {
+  text-align: center;
+  font-size: 24px;
+  position: relative;
+}
+
+/* Dots container for loading animation */
+.dots-container {
+  display: inline-block;
+  font-size: 30px;
+}
+
+/* Individual dot: circle, black, animated */
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: dotAnimation 1.5s infinite ease-in-out;
+}
+
+/* Animation delays for each dot to stagger the effect */
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Keyframes for dot scaling animation */
+@keyframes dotAnimation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* ===========================
+   Custom Buttons and Logo
+============================== */
+
+/* Play game button: wide, rounded, white border */
+.playgamebutton {
+  width: 300px;
+  border-radius: 15px;
+  border: white;
+  border-style: outset;
+  border-color: white;
+}
+
+/* Navigation button: rounded, short, spacing */
 .navbutton {
   text-align: center;
   border-radius: 10px;
@@ -183,18 +251,24 @@ footer p {
   margin-right: 20px;
 }
 
+/* Logo: rounded bottom-right, border on bottom and right, fixed position */
 .logo {
   border-radius: 0 0 20px 0;
-  border-style: inset; /* Changed from outset to solid */
+  border-style: solid; /* Changed from outset to solid */
   border-width: 0;    /* Reset all borders to zero */
   border-bottom-width: 3px; /* Set bottom border width */
   border-right-width: 3px;  /* Set right border width */
-  border-color: rgba(255, 255, 255, 0.658);
+  border-color: rgba(255, 255, 255, 0.733);
   position: fixed;
   top: 0;
   left: 0;
 }
 
+/* ===========================
+   Accessibility Bar
+============================== */
+
+/* Accessibility bar: fixed above bottom navbar, dark background, rounded top */
 .access {
   text-align: center;
   height: 75px;
@@ -212,6 +286,7 @@ footer p {
   border-style: solid;
 }
 
+/* Accessibility button: wide, rounded, white border */
 .accessibilitybutton {
   width: 300px;
   border-radius: 15px;
@@ -223,12 +298,73 @@ footer p {
 /* ===========================
    Accessible Theme Overrides
 ============================== */
+
+/* Accessible theme: dark navy background, khaki text */
 body.accessible-theme {
   background-color: #1a2634 !important; /* dark navy blue */
   color: #f0e68c !important; /* khaki (soft yellow) */
-  font-size: 1.3rem !important;
-  font-weight: 700 !important;
-  line-height: 1.6 !important;
+}
+
+/* Accessible theme: header, footer, bars use navy background and khaki text */
+body.accessible-theme header,
+body.accessible-theme footer,
+body.accessible-theme .access,
+body.accessible-theme .bottomnavbar {
+  background-color: #1a2634 !important;
+  color: #f0e68c !important;
+  border-color: #f0e68c !important;
+}
+
+/* Improve focus visibility for links and buttons in all themes */
+a:focus-visible,
+button:focus-visible,
+.navbutton:focus-visible,
+.accessibilitybutton:focus-visible,
+.playgamebutton:focus-visible {
+  outline: 3px solid #f0e68c;
+  outline-offset: 2px;
+  background-color: #324963;
+  color: #f0e68c;
+}
+
+/* Larger font and padding for all buttons for accessibility */
+button,
+.navbutton,
+.accessibilitybutton,
+.playgamebutton {
+  font-size: 1.1rem;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 24px;
+}
+
+/* Navigation links: higher contrast, larger, rounded */
+nav ul li a {
+  color: #324963;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+/* Nav link focus/hover: yellow background, navy text, underline */
+nav ul li a:focus-visible,
+nav ul li a:hover {
+  background-color: #f0e68c;
+  color: #1a2634;
+  text-decoration: underline;
+}
+
+/* Bottom navbar and access bar: dark background, khaki text for contrast */
+.bottomnavbar,
+.access {
+  background-color: #232323;
+  color: #f0e68c;
+}
+
+/* Accessible theme: reinforce high contrast for all bars */
+body.accessible-theme {
+  background-color: #1a2634 !important;
+  color: #f0e68c !important;
 }
 
 body.accessible-theme header,
@@ -240,6 +376,12 @@ body.accessible-theme .bottomnavbar {
   border-color: #f0e68c !important;
 }
 
+/* Use Noto Sans font for all text elements for consistency */
+body, h1, h2, h3, h4, h5, h6, p, nav, ul, li, button, input, textarea, select, label, .bottomnavbar, .access, .accessibilitybutton, .playgamebutton {
+  font-family: 'Noto Sans' !important;
+}
+
+/* Accessible theme: links are yellow, underlined, bold */
 body.accessible-theme a,
 body.accessible-theme nav ul li a {
   color: #f0e68c !important;
@@ -247,13 +389,121 @@ body.accessible-theme nav ul li a {
   font-weight: 700 !important;
 }
 
+/* Accessible theme: buttons invert colors for contrast */
 body.accessible-theme button {
   background-color: #f0e68c !important;
   color: #1a2634 !important;
   border-color: #f0e68c !important;
 }
 
+/* Accessible theme: button hover uses navy background, yellow text */
 body.accessible-theme button:hover {
-  background-color: #1a2634 !important;
+  background-color: #324963 !important;
   color: #f0e68c !important;
+}
+
+/* Smooth transitions for color and background changes */
+body,
+header,
+footer,
+.access,
+.bottomnavbar,
+button,
+nav ul li a {
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s;
+}
+
+/* ===========================
+   Responsive (Mobile) Styles
+============================== */
+
+/* Styles for screens 600px wide or less */
+@media (max-width: 600px) {
+  /* Header stacks vertically, smaller gap and padding */
+  header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 5px;
+    font-size: 1rem;
+  }
+
+  /* Navigation list stacks vertically */
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Buttons and nav links: full width, smaller font, rounded */
+  nav ul li a,
+  .navbutton,
+  .accessibilitybutton,
+  .playgamebutton,
+  button {
+    width: 100%;
+    min-width: unset;
+    box-sizing: border-box;
+    font-size: 1rem;
+    padding: 14px 0;
+    margin: 0 auto 10px auto;
+    border-radius: 10px;
+  }
+
+  /* Main content and sections: reduced padding, smaller font */
+  main {
+    padding: 20px 5px;
+  }
+
+  section {
+    padding: 12px 5px;
+    font-size: 1rem;
+  }
+
+  /* Bottom navbar and access bar: smaller font and padding */
+  .bottomnavbar,
+  .access {
+    font-size: 1rem;
+    padding: 10px 2px;
+    height: auto;
+  }
+
+  /* Logo: static position, centered, smaller */
+  .logo {
+    position: static;
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    height: auto;
+  }
+
+  /* Headings: smaller font, centered */
+  h1, h2, h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  /* Play game and accessibility buttons: full width, larger padding */
+  .playgamebutton,
+  .accessibilitybutton {
+    width: 100%;
+    min-width: unset;
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+}
+
+/* Ensure accessible theme is also responsive on mobile */
+@media (max-width: 600px) {
+  body.accessible-theme header,
+  body.accessible-theme footer,
+  body.accessible-theme .access,
+  body.accessible-theme .bottomnavbar {
+    padding: 10px 2px;
+    font-size: 1rem;
+  }
+  body.accessible-theme nav ul li a {
+    font-size: 1rem;
+    padding: 12px 0;
+    width: 100%;
+    margin-bottom: 8px;
+  }
 }

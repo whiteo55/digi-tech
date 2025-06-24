@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags for character encoding and responsive design -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title and favicon -->
     <title>Adventure Cymru - Game</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Link to main stylesheet and Google Fonts -->
     <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
   </head>
   <body>
+    <!-- Header section with logo, title, and navigation -->
     <header>
-      <img src="logo.png" class ="logo" width="65" height="65" onclick="document.location='index.html'">
-      <h1 style="padding-left: 450px;">Adventure Cymru Game</h1>
+      <!-- Logo image, clickable to return to home page -->
+      <img src="logo.png" class ="logo" width="80" height="80" onclick="document.location='index.html'" alt="Adventure Cymru Logo">
+      <!-- Main heading for the game page -->
+      <h1 style="padding-left: 700px;">Adventure Cymru Game</h1>
+      <!-- Navigation bar with a Home button -->
       <nav style="margin-left: 500px;">
         <button href="index.html" class="navbutton" onclick="document.location='index.html'">Home</button>
       </nav>
     </header>
 
+    <!-- Mission statement and game introduction -->
     <center>
-    <h3>Your mission:</h3>
-     <h4>
-        Your mission: Survive. After a devastating plane crash, you find yourself
-       stranded in the wild with nothing but your wits and limited resources.
-       Navigate through treacherous terrain, overcome deadly obstacles, and make
-       life-or-death decisions as you fight your way to safety. Every move
-       counts. Will you make it out alive?
-     </h4>
-    </center
+      <br>
+      <h3>Your mission:</h3>
+      <br>
+      <p><b>
+        <u>Survive.</u>
+        <!-- Game introduction and instructions for the player -->
+        <p>
+          After a devastating plane crash, you find yourself
+          stranded in the wild with nothing but your wits and limited resources.</p>
+        <p>
+          Navigate through treacherous terrain, overcome deadly obstacles, and make
+          life-or-death decisions as you fight your way to safety.</p>
+        <p>
+            Every move counts. Will you make it out alive?
+        </p>
+       </b></p>
+       <br>
+       <br>
+    </center>
 
     <main>
+      <!-- Game container section with loading animation -->
       <section id="game-container">
         <p>Loading game... Please wait.</p>
         <div class="dots-container">
@@ -38,12 +58,15 @@
       </section>
     </main>
 
+    <!-- Fixed bottom navigation bar -->
     <div class="bottomnavbar">
       <p>&copy; 2025 Adventure Cymru. All rights reserved.</p>
     </div>
+    <!-- Accessibility bar with toggle button -->
     <div class="access">
       <button class="accessibilitybutton" id="accessibilityBtn">accessibility</button>
     </div>
+    <!-- Link to JavaScript for accessibility features -->
     <script src="script.js"></script>
   </body>
 </html>

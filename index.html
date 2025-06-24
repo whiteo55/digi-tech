@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set character encoding and responsive viewport for mobile devices -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title and favicon -->
     <title>Adventure Cymru - Wilderness Awareness Courses</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Link to main stylesheet and Google Fonts -->
     <link rel="stylesheet" href="styles.css" />
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
   </head>
   <body>
+    <!-- Header section with logo, title, and navigation buttons -->
     <header>
-      <img src="logo.png" class ="logo" width="65" height="65">
-      <h1 style="padding-left: 600px;">Adventure Cymru</h1>
+      <!-- Logo image for branding -->
+      <img src="logo.png" class ="logo" width="80" height="80" alt="Adventure Cymru Logo">
+      <!-- Main site title, visually offset using padding -->
+      <h1 style="padding-left: 800px;">Adventure Cymru</h1>
+      <!-- Navigation bar with buttons to other pages -->
       <nav style="margin-left: 500px;">
+        <!-- Button to go to the game page -->
         <button href="game.html" class="navbutton" onclick="document.location='game.html'">Game</button>
+        <!-- Button to go to the development page -->
         <button href="dev.html" class="navbutton" onclick="document.location='dev.html'">Dev Page</button>
       </nav>
     </header>
 
     <main>
+      <!-- Introductory section describing the courses and offerings -->
       <section class="intro">
+        <!-- Welcome heading -->
         <h2 style="font-size: 40px;">Welcome to Adventure Cymru!</h2>
+        <!-- Brief description of the organization's mission -->
         <p>
           We offer exciting outdoor activity courses to help you develop
           wilderness survival skills. Get ready for a thrilling adventure!
         </p>
+        <!-- Additional details about course inclusivity -->
         <p>Whether you're a beginner or an experienced adventurer,</p>
+        <!-- List of skills taught in the courses -->
         <p>our courses are designed to teach you valuable skills such as navigation, shelter building, fire starting, and first aid. </p>
+        <!-- Highlight the opportunity to explore nature -->
         <p>You’ll also have the chance to explore breathtaking landscapes and connect with nature like never before.</p>
+        <!-- Information about the instructors -->
         <p>
           Our instructors are highly trained and passionate about outdoor education.</p>
           <p>They’ll guide you through every step, ensuring that you gain confidence and knowledge in the wild.</p>
+          <!-- Mention of additional workshops -->
           <p>Along with the adventure courses, we also offer workshops on sustainable
           living, environmental conservation, and outdoor cooking.
         </p>
         <br>
+        <!-- Button to start the game -->
         <button class="playgamebutton" onclick="document.location='game.html'">
           Play the Game
         </button>
       </section>
     </main>
 
+    <!-- Fixed bottom navigation bar for copyright -->
     <div class="bottomnavbar">
       <p>&copy; 2025 Adventure Cymru. All rights reserved.</p>
     </div>
+    <!-- Accessibility bar with toggle button for high-contrast mode -->
     <div class="access">
       <button class="accessibilitybutton" id="accessibilityBtn">accessibility</button>
     </div>
+    <!-- Link to JavaScript for accessibility features -->
     <script src="script.js"></script>
   </body>
 </html>
