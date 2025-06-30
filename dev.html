@@ -20,7 +20,7 @@
     <!-- Header section with logo, title, and navigation -->
     <header>
       <!-- Logo image, clickable to return to home page -->
-      <img src="logo.png" class="logo" width="80" height="80" onclick="document.location='index.html'" alt="Adventure Cymru Logo">
+      <img src="logo.png" class="logo" width="85" height="85" onclick="document.location='index.html'" alt="Adventure Cymru Logo">
       <!-- Main heading for the dev page -->
       <h1 style="padding-left: 625px;">Adventure Cymru Development Page</h1>
       <!-- Navigation bar with a Home button -->
@@ -63,10 +63,52 @@
     <div class="bottomnavbar">
       <p>&copy; 2025 Adventure Cymru. All rights reserved.</p>
     </div>
-    <!-- Accessibility bar with toggle button -->
-    <div class="access">
-      <button class="accessibilitybutton" id="accessibilityBtn">accessibility</button>
+     <div id="floating-access-btn" class="floating-access-btn" tabindex="0" aria-label="Open accessibility and theme menu">
+    <span aria-hidden="true">🦽</span>
+  </div>
+  <div id="theme-menu" class="theme-menu" aria-label="Theme and accessibility menu" hidden>
+    <strong>Themes:</strong>
+    <div class="theme-switch-group">
+      <label><input type="radio" name="theme" class="theme-switch" value="default" checked> Default</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="accessible"> Accessible</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="dark"> Dark</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="high-contrast"> High Contrast</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="solarized"> Solarized</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="forest"> Forest</label>
     </div>
+    <hr>
+    <strong>Accessibility:</strong>
+    <div class="access-switch-group">
+      <label class="switch-label">
+        <span>Increase Font Size</span>
+        <button class="access-btn" data-access="increase-font">+</button>
+        </label>
+        <label class="switch-label">
+          <span>Decrease Font Size</span>
+          <button class="access-btn" data-access="decrease-font">-</button>
+        </label>
+        <label class="switch-label">
+          <span>Reset Font Size</span>
+          <button class="access-btn" data-access="reset-font">&#8634;</button>
+        </label>
+        <label class="switch-label">
+          <span>Dyslexia Friendly Font</span>
+          <input type="checkbox" class="access-toggle" data-access="dyslexia-font">
+          <span class="slider"></span>
+        </label>
+        <label class="switch-label">
+          <span>Underline Links</span>
+          <input type="checkbox" class="access-toggle" data-access="underline-links">
+          <span class="slider"></span>
+        </label>
+        <label class="switch-label">
+          <span>Readable Line Spacing</span>
+          <input type="checkbox" class="access-toggle" data-access="line-spacing">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <!-- ...existing code... -->
     <!-- Link to JavaScript for accessibility features -->
     <script src="script.js"></script>
   </body>

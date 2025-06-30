@@ -9,13 +9,14 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Link to main stylesheet and Google Fonts -->
     <link rel="stylesheet" href="styles.css" />
-    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Header section with logo, title, and navigation buttons -->
     <header>
       <!-- Logo image for branding -->
-      <img src="logo.png" class ="logo" width="80" height="80" alt="Adventure Cymru Logo">
+      <img src="logo.png" class ="logo" width="85" height="84" alt="Adventure Cymru Logo">
       <!-- Main site title, visually offset using padding -->
       <h1 style="padding-left: 800px;">Adventure Cymru</h1>
       <!-- Navigation bar with buttons to other pages -->
@@ -67,6 +68,54 @@
     <div class="access">
       <button class="accessibilitybutton" id="accessibilityBtn">accessibility</button>
     </div>
+    <!-- Floating Accessibility Button and Theme Menu -->
+  <!-- ...existing code... -->
+  <div id="floating-access-btn" class="floating-access-btn" tabindex="0" aria-label="Open accessibility and theme menu">
+    <span aria-hidden="true">🦮</span>
+  </div>
+  <div id="theme-menu" class="theme-menu" aria-label="Theme and accessibility menu" hidden>
+    <strong>Themes:</strong>
+    <div class="theme-switch-group">
+      <label><input type="radio" name="theme" class="theme-switch" value="default" checked> Default</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="accessible"> Accessible</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="dark"> Dark</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="high-contrast"> High Contrast</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="solarized"> Solarized</label>
+      <label><input type="radio" name="theme" class="theme-switch" value="forest"> Forest</label>
+    </div>
+    <hr>
+    <strong>Accessibility:</strong>
+    <div class="access-switch-group">
+      <label class="switch-label">
+        <span>Increase Font Size</span>
+        <button class="access-btn" data-access="increase-font">+</button>
+        </label>
+        <label class="switch-label">
+          <span>Decrease Font Size</span>
+          <button class="access-btn" data-access="decrease-font">-</button>
+        </label>
+        <label class="switch-label">
+          <span>Reset Font Size</span>
+          <button class="access-btn" data-access="reset-font">&#8634;</button>
+        </label>
+        <label class="switch-label">
+          <span>Dyslexia Friendly Font</span>
+          <input type="checkbox" class="access-toggle" data-access="dyslexia-font">
+          <span class="slider"></span>
+        </label>
+        <label class="switch-label">
+          <span>Underline Links</span>
+          <input type="checkbox" class="access-toggle" data-access="underline-links">
+          <span class="slider"></span>
+        </label>
+        <label class="switch-label">
+          <span>Readable Line Spacing</span>
+          <input type="checkbox" class="access-toggle" data-access="line-spacing">
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+    <!-- ...existing code... -->
     <!-- Link to JavaScript for accessibility features -->
     <script src="script.js"></script>
   </body>
