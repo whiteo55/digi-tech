@@ -60,15 +60,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Toggle menu on click
   floatingBtn.addEventListener('click', () => {
-    menu.hidden = !menu.hidden;
     if (!menu.hidden) {
-      // Position menu near button
-      const rect = floatingBtn.getBoundingClientRect();
-      menu.style.left = rect.left + 'px';
-      menu.style.top = (rect.top - menu.offsetHeight - 10) + 'px';
+      menu.classList.remove('open');
+      setTimeout(() => { menu.hidden = true; }, 180);
+      return;
+    }
+
+    // Get button rect
+    const btnRect = floatingBtn.getBoundingClientRect();
+
+    // Show menu for measurement
+    menu.style.display = 'flex';
+    menu.style.visibility = 'hidden';
+    menu.hidden = false;
+
+    setTimeout(() => {
+      const menuRect = menu.getBoundingClientRect();
+
+      let left, top;
+
+      // Prefer above
+      left = btnRect.left;
+      top = btnRect.top - menuRect.height - 10;
+      if (top >= 10 && left + menuRect.width <= window.innerWidth - 10 && left >= 10) {
+        // Enough space above
+      } else {
+        // Try below
+        top = btnRect.bottom + 10;
+        if (top + menuRect.height <= window.innerHeight - 10 && left + menuRect.width <= window.innerWidth - 10 && left >= 10) {
+          // Enough space below
+        } else {
+          // Try right
+          left = btnRect.right + 10;
+          top = btnRect.top;
+          if (left + menuRect.width <= window.innerWidth - 10 && top + menuRect.height <= window.innerHeight - 10 && top >= 10) {
+            // Enough space right
+          } else {
+            // Try left (ACTUAL FLIP)
+            left = btnRect.left - menuRect.width - 10;
+            top = btnRect.top;
+            // Clamp if needed
+            if (left < 10) left = 10;
+            if (top < 10) top = 10;
+            if (top + menuRect.height > window.innerHeight - 10) {
+              top = window.innerHeight - menuRect.height - 10;
+            }
+            // Make sure menu does NOT overlap the button
+            // If not enough space for full menu left of button, move as far left as possible without overlap
+            if (left + menuRect.width > btnRect.left - 10) {
+              left = Math.max(10, btnRect.left - menuRect.width - 10);
+            }
+          }
+        }
+      }
+
+      // Animate to final position
+      menu.style.left = left + 'px';
+      menu.style.top = top + 'px';
       menu.style.right = 'auto';
       menu.style.bottom = 'auto';
-    }
+      menu.style.visibility = '';
+      menu.classList.add('open');
+    }, 10);
   });
 
   // Keyboard accessibility
